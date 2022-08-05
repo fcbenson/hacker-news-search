@@ -1,0 +1,9 @@
+.homeLinks {
+	display: flex;
+}
+
+.homeLinks a {
+	display: block;
+	width: 30%;
+	text-align: center;
+}
