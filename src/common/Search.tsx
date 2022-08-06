@@ -13,7 +13,6 @@ export default function Search() {
 
 	function searchHackerNews() {
 		dispatch(search());
-		console.log('currentSearch: ' + currentSearch);
 
 		fetch(`http://hn.algolia.com/api/v1/search?query=${currentSearch}&tags=story`)
 			.then((res) => res.json())
@@ -62,13 +61,13 @@ export default function Search() {
 				<span className='url'>(<a target="_blank" href={hit.url} rel="noreferrer">{hit.url}</a>)</span>
 			</div>
 			<div className='meta'>
-				<span><a href={yCombinatorURL+hit.objectID}>{hit.points.toString()}</a></span>
+				<span><a target="_blank" href={yCombinatorURL+hit.objectID} rel="noreferrer">{hit.points.toString()}</a></span>
 				<span className="separator">|</span>
-				<span><a href={yCombinatorURL+hit.author}>{hit.author}</a></span>
+				<span><a target="_blank" href={yCombinatorURL+hit.author} rel="noreferrer">{hit.author}</a></span>
 				<span className="separator">|</span>
-				<span><a href={yCombinatorURL+hit.objectID}>{articleAge(hit.created_at)}</a></span>
+				<span><a target="_blank" href={yCombinatorURL+hit.objectID} rel="noreferrer">{articleAge(hit.created_at)}</a></span>
 				<span className="separator">|</span>
-				<span><a href={yCombinatorURL+hit.objectID}>{`${hit.num_comments} comments`}</a></span>
+				<span><a target="_blank" href={yCombinatorURL+hit.objectID} rel="noreferrer">{`${hit.num_comments} comments`}</a></span>
 			</div>
 		</li>
 	));

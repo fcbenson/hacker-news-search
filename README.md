@@ -1,13 +1,17 @@
 # Hacker News Search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This project uses basic UI testing with the React testing library, state management with Redux, page navigation with React Router
 
-## Purpose
+## Challenge
 
 Build an application that has two pages users can navigate to:
 
 - "/search" lets the user search the Hacker News Algolia API and displays a list of results (https://hn.algolia.com/api)
 - "/history" shows the users a list of their past searches from this session (these do not need to persist through refresh).
+
+## Developer Notes
+- Redux has changed quite a lot since I last used it
+- First time using the React Testing Library
 
 ## Available Scripts
 
